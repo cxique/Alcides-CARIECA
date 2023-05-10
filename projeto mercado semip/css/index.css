@@ -1,0 +1,680 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #242424;
+  font-family: sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #E9EDC9;
+  height: 100px;
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+header img, header input {
+  display: flex;
+}
+
+header img {
+  width: 110px;
+  height: 80px;
+  padding: none;
+}
+
+header input{
+  margin-top: 0;
+}
+
+.search-box {
+  position: absolute;
+  top: 6%;
+  right: 5%;
+  background: #CCD5AE;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  margin-bottom: 55px;
+}
+
+.search-bnt {
+  color: #CCD5AE;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #353b48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s
+}
+
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #000;
+  font-size: 10pt;
+  transition: 0.2s;
+  line-height: 16px;
+  width: 0px;
+}
+
+.search-box:hover>.search-txt {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.search-box:hover>.search-bnt {
+  background: #fff;
+}
+
+a i {
+  color: #000;
+}
+
+nav {
+  background-color: #CCD5AE;
+  height: 100%;
+  text-align: center;
+  padding-top: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #F6931C;
+}
+
+.menu {
+  list-style: none;
+  border: 1px solid #c0c0c0;
+  float: left;
+}
+
+.menu li {
+  position: relative;
+  float: left;
+  border-right: 1px solid #c0c0c0;
+  margin-right: 2px;
+}
+
+.gotopbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #27ae60;
+  bottom: 40px;
+  right: 50px;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+}
+
+.menu li a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+}
+
+.menu li a:hover {
+  background: #333;
+  color: #fff;
+  box-shadow: 0 3px 10px 0 #ccc;
+  -webkit-box-shadow: 0 3px 10px 0 #ccc;
+  text-shadow: 0px 0px 5px #fff;
+}
+
+.menu li ul {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background-color: #fff;
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  color: #000;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  display: block;
+  background-color: #FFF;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.module p {
+  margin-bottom: 40px;
+}
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+
+section.module h2 {
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+section.module.content {
+  padding: 40px 0;
+  background: #ece7d5;
+}
+
+section.module.parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+section.module.parallax:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 8;
+  background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+  background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+}
+
+
+section.module.p1 {
+  background-image: url("https://www.alfarahinter.com/wp-content/uploads/2021/01/empty-top-wooden-table-with-supermarket-blur-background.jpg");
+}
+
+section.module.parallax h1 {
+  color: #FFF;
+  text-align: center;
+  font-size: 78px;
+  z-index: 50;
+  text-transform: uppercase;
+}
+
+section.module.parallax h2 {
+  color: #FFF;
+  text-align: center;
+  font-size: 30px;
+  z-index: 25;
+  text-transform: uppercase;
+}
+
+image{
+  margin-bottom: 10px;
+  margin: 0px;
+}
+
+.box {
+  display: inline-block;
+  width: 300px;
+  height: 420px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #ccd5ae;
+  overflow: hidden;
+  margin-left: 10px;
+  text-align: center;
+  margin: auto;
+}
+
+.box img {
+  max-width: 100%;
+  height: 300px;
+  padding-left: 80px;
+  
+}
+
+.carnes img {
+  max-width: 100%;
+  height: 250px;
+  padding-left: 35px;
+}
+
+#fraldinha img {
+  max-width: 100%;
+  height: 270px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+#cupim img {
+  height: 270px;
+  padding-top: 15px;
+}
+
+#contrafile img {
+  height: 270px;
+  width: 295px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#bisteca img {
+  height: 270px;
+  width: 290px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+  padding-top: 20px;
+}
+
+.laticinios img {
+  max-width: 100%;
+  height: 250px;
+  padding-left: 16px;
+}
+
+#margarina img {
+  max-width: 290px;
+  height: 270px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+#leite-condensado img {
+  max-width: 100%;
+  height: 250px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.graos img {
+  max-width: 100%;
+  height: 230px;
+  padding-left: 25px;
+}
+
+#arroz img {
+  height: 251px;
+}
+
+#feijao img {
+  height: 250px;
+}
+
+.doce img {
+  max-width: 100%;
+  height: 230px;
+  padding-left: 25px;
+}
+
+.bebidas img {
+  max-width: 100%;
+  height: 250px;
+  padding-left: 90px;
+}
+
+#refrigerante img {
+  padding-left: 65px;
+  padding-right: 65px;
+  height: 270px;
+}
+
+#cerveja img {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.vinho img{
+  padding: 0px;
+}
+
+.refri img{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.limpeza img {
+  max-width: 100%;
+  height: 250px;
+  padding-right: 25px;
+  padding-left: 30px;
+}
+
+#limpador img {
+  padding-left: 90px;
+  padding-right: 90px;
+  height: 230px;
+}
+
+#lava-roupas img {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.verduras img {
+  padding-left: 20px;
+  padding-right: 5px;
+  height: 250px;
+}
+
+.frutas img {
+  padding-left: 20px;
+  padding-right: 15px;
+  height: 250px;
+}
+
+#abacaxi img {
+  padding-left: 87px;
+  padding-right: 87px;
+  height: 250px;
+}
+
+.peixes img {
+  padding-left: 20px;
+  padding-right: 15px;
+  height: 250px;
+  width: 300px;
+}
+
+#tilapia img {
+  padding-top: 25px;
+  padding-left: 25px;
+  height: 270px;
+  width: 250;
+}
+
+#camarao img {
+  height: 230px;
+  width: 230px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.tempero img {
+  padding-left: 20px;
+  padding-right: 15px;
+  height: 250px;
+  width: 300px;
+}
+
+#oregano img {
+  height: 270px;
+}
+
+#azeite img {
+  height: 250px;
+  width: 175px;
+  padding-left: 95px;
+
+}
+
+.box h2 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #F6931C;
+}
+
+.box figcaption {
+  margin: 5px 0;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.box hr {
+  border: none;
+  border-top: 1.5px solid #ccc;
+  margin: 5px 0;
+}
+
+.quantidade {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  margin-left: 90px;
+}
+
+.quantidade label {
+  margin-right: 0;
+  font-size: 1em;
+}
+
+.quantidade input {
+  width: 40px;
+  text-align: left;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.quantidade button{
+  text-align: center;
+}
+
+#quantidade{
+  text-align: center;
+  margin: 5px;
+}
+
+.botao-quantidade {
+  border: #ccd5ae;
+  background-color: #588157;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 40px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.botao-quantidade .quantidade{
+ text-align: center;
+}
+
+.botao-quantidade:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+.botao-carrinho {
+  border: 2px solid #ccd5ae;
+  background-color: #fff;
+  color: #588157;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  margin-left: 40px;
+  margin-right: 1px;
+  text-align: right;
+}
+
+
+
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+#contato {
+  display: flex;
+  background-color: #588157;
+  border: 1px solid #3a5a40;
+  border-radius: 20px;
+  margin: 20px;
+  width: 100%;
+  height: 80px;
+  padding: 0;
+}
+
+form {
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+label {
+  color: #fff;
+  font-size: 15pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 10px;
+}
+
+input,
+textarea {
+  display: inline-block;
+  background-color: #fff;
+  color: #344e41;
+  border: 1px solid #344e41;
+  border-radius: 10px;
+  width: 250px;
+  height: 25px;
+  padding: 10px;
+  margin-left: 0px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contato button {
+  font-size: 10pt;
+  width: 150px;
+  height: 40px;
+  background-color: #ccd5ae;
+  border: none;
+  border-radius: 20px;
+  margin-left: 30px;
+  margin-top: 25px;
+}
+
+footer {
+  background-color: #ecdebe;
+  color: #01180b;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.box{
+  margin-left: 30px;
+}
+
+footer ul {
+  justify-content: space-between;
+}
+
+@media all and (max-width: 820px) {
+  section.module h2 {
+    font-size: 32px;
+  }
+
+  .module h2,
+  p {
+    padding: 0 8px;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  section.module.parallax h1 {
+    font-size: 36px;
+  }
+
+  
+.image img{
+  width: 500px;
+}
+  #contato {
+    width: 100%;
+    height: 300px;
+  }
+
+  form {
+    flex-wrap: wrap;
+  }
+
+  #contato button {
+    margin-top: 0px;
+  }
+
+  label {
+    display: flexbox;
+    width: 412px;
+    height: 80px;
+    justify-content: space-around;
+  }
+
+  label p {
+    width: 212px;
+    margin-left: 8px;
+  }
+}
